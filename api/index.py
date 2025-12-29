@@ -60,8 +60,8 @@ def send_email(
             "reply_to": email
         })
         return f"Email sent! We'll reply to {email} soon."
-    except Exception as e:
-        return f"Failed to send email: {str(e)}"
+    except Exception:
+        return "Failed to send email. Please try again later."
 
 
 # Create ASGI app with CORS
